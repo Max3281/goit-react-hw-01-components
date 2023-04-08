@@ -13,3 +13,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.test {
+  width: 100px;
+  height: 100px;
+  background-color: aliceblue;
+  color: rgba(255, 255, 255, 0.5);
+  flex-direction: column;
+  position: absolute;
+}
+
+.test::before {
+  content: '';
+  height: inherit;
+  width: 5px;
+  text-transform: capitalize;
+}
