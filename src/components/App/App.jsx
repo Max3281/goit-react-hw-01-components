@@ -1,4 +1,4 @@
-import user from '../../user.json';
+import user from '../../fake_backend/user.json';
 import data from '../../fake_backend/data.json';
 import friends from '../../fake_backend/friends.json';
 import transaction from '../../fake_backend/transactions.json';
