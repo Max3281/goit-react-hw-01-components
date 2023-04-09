@@ -5,7 +5,7 @@ import transaction from '../../fake_backend/transactions.json';
 
 import Profile from '../Profile/Profile';
 import Statistics from 'components/Statistics/Statistics';
-import Friends from 'components/FriendsList/Friends'
+import Friends from 'components/Friends/Friends';
 import TransactionHistory from 'components/TransactionHistory/TransactionHistory';
 
 import { Container } from './App.styled';
@@ -20,16 +20,17 @@ export default function App() {
         tag={userData.tag}
         location={userData.location}
         avatar={userData.avatar}
-        followers={userData.stats.followers}
-        views={userData.stats.views}
-        likes={userData.stats.likes}
+        stats={userData.stats}
       />
 
+      <Statistics items={data} title="upload stats" />
       <Statistics items={data} />
-      
+
       <Friends friends={friends} />
 
-      <TransactionHistory data={ transaction} />
+      <TransactionHistory data={transaction} />
     </Container>
   );
 }
+
+console.log(`1`);

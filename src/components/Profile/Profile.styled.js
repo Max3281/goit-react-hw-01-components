@@ -24,7 +24,7 @@ export const UserProfile = styled.section`
 `;
 
 export const UserDescription = styled.div`
-position: relative;
+  position: relative;
 
   background-color: aliceblue;
   width: 300px;
@@ -103,9 +103,9 @@ export const UserStatsUnit = styled.li`
 `;
 
 export const UserStatsLabel = styled.span`
-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 `;
 
 export const UserStatsQuantity = styled.span`
-font-weight: 700
+  font-weight: 700;
 `;

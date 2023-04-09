@@ -12,8 +12,8 @@ import {
   UserStatsQuantity,
 } from './Profile.styled';
 
-export default function Profile(props) {
-  const { avatar, username, tag, location, followers, views, likes } = props;
+export default function Profile({ avatar, username, tag, location, stats }) {
+  const { followers, views, likes } = stats;
   return (
     <UserProfile>
       <UserDescription>
@@ -42,11 +42,13 @@ export default function Profile(props) {
 }
 
 Profile.propTypes = {
-  avatar: propTypes.string,
-  username: propTypes.string,
-  location: propTypes.string,
-  tag: propTypes.string,
-  followers: propTypes.number,
-  views: propTypes.number,
-  likes: propTypes.number,
+  avatar: propTypes.string.isRequired,
+  username: propTypes.string.isRequired,
+  location: propTypes.string.isRequired,
+  tag: propTypes.string.isRequired,
+  stats: propTypes.shape({
+    followers: propTypes.number.isRequired,
+    views: propTypes.number.isRequired,
+    likes: propTypes.number.isRequired,
+  }).isRequired,
 };

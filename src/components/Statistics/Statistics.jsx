@@ -8,10 +8,10 @@ import {
   StatisticsQuantity,
 } from './Statistics.styled';
 
-export default function StatisticsList({ items }) {
+export default function Statistics({ items, title }) {
   return (
     <StatisticsCard>
-      <StatisticsTitle>upload stats</StatisticsTitle>
+      {title && <StatisticsTitle>{title}</StatisticsTitle>}
       <StatisticsUnit>
         {items.map(item => {
           return (
@@ -26,12 +26,13 @@ export default function StatisticsList({ items }) {
   );
 }
 
-StatisticsList.propTypes = {
+Statistics.propTypes = {
+  title: propTypes.string,
   items: propTypes.arrayOf(
     propTypes.shape({
       id: propTypes.string.isRequired,
       label: propTypes.string.isRequired,
       percentage: propTypes.number.isRequired,
     })
-  ),
+  ).isRequired,
 };
